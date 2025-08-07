@@ -1,3 +1,5 @@
+import LeftBar from "./components/LeftBar";
+import RightBar from "./components/RightBar";
 import "./globals.css";
 
 export default function RootLayout({
@@ -7,7 +9,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className=" flex justify-between">
+           <div className=""><LeftBar/></div>
+             <div className="">{children}</div>
+               <div className=""><RightBar/></div>
+        </div>
+      </body>
     </html>
   );
 }
