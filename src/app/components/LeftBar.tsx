@@ -90,7 +90,7 @@ const LeftBar = () => {
      </Link>
      </div>
     {/*user profile*/}
-     <div className="flex items-center justify-between pt-6 ">
+     <div className="flex items-center justify-between pt-20 ">
       <div className="flex items-center gap-2">
         <div className="w-10 h-10 relative rounded-full overflow-hidden">
           <Image src="/general/avatar.png" alt="profile" fill />
