@@ -1,9 +1,13 @@
+import Post from "./Post";
+
 const Feed = () => {
   return (
     <div className="feed-container">
-      <h1>Feed</h1>
-      {/* Feed content goes here */}
+      <Post />
+        <Post />
+          <Post />
+      
     </div>
   );
-}   
+}    
 export default Feed;
