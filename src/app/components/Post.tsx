@@ -2,8 +2,32 @@ import { Image } from "@imagekit/next";
 import Imagecontent from "./imagecontent";
 import PostInfo from "./PostInfo";
 import PostInteractions from "./PostInteractions";
+import { imagekit } from "@/app/utils";
 
-const Post = () => {
+interface FileDetailsResponse {
+  width: number;
+  height: number;
+  filePath: string;
+  url: string;
+  fileType: string;
+  customMetadata?: { sensitive: boolean };
+}
+
+const Post = async () => {
+ 
+  const getFileDetails =  async (fileId:string):Promise<FileDetailsResponse>=>{
+    return new Promise((resolve, reject) => {
+      imagekit.getFileDetails(fileId, function(error, result){
+        if(error) console.log(error);
+        else console.log(result);
+      })
+  })
+}
+    
+
+
+
+  
   return (
     <div className=" p-4 border-y-[1px ] border-borderGray ">
   {/*POST TYPE*/}
