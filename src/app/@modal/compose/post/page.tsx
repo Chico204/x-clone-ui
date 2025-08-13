@@ -17,8 +17,8 @@ const PostModal =() => {
         <div className="py-8 flex gap-4">
           <div className="relative w-10 h-10 rounded-full overflow-hidden">
             <Image
-              src="https://ik.imagekit.io/v9wymwzf6/public/general/avatar.png?updatedAt=1754699850233"
-             urlEndpoint="https://ik.imagekit.io/v9wymwzf6/public/general/avatar.png?updatedAt=1754699850233"
+               src="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_zRv0fiMyU.JPG?updatedAt=1754957290695"
+            urlEndpoint="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_zRv0fiMyU.JPG?updatedAt=1754957290695"
               alt="Lama Dev"
               width={100}
               height={100}

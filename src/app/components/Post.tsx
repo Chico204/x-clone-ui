@@ -43,7 +43,7 @@ const Post = async () => {
     <div className="flex gap-4">
         {/*POST IMAGE*/}
         <div className=" relative w-10 h-10 rounded-full overflow-hidden ">
-        <Image urlEndpoint="https://ik.imagekit.io/v9wymwzf6/public/general/avatar.png?updatedAt=1754699850233" src="https://ik.imagekit.io/v9wymwzf6/public/general/avatar.png?updatedAt=1754699850233" alt="pro" width={50} height={50} />
+        <img  src="/general/IMG_2625.JPG" alt="pro" width={50} height={50} />
         </div>
         {/*POST TEXT*/}
         <div className="flex-1 flex flex-col gap-2">

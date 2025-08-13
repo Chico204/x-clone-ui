@@ -1,85 +1,97 @@
 import Feed from "../components/Feed";
-import Imagecontent from "../components/imagecontent";
+import Image from "next/image";
 import Link from "next/link";
-import { Image  } from "@imagekit/next";
-const UserPage = () => {
+
+export default function UserPage() {
   return (
-    <div className="">
+    <div>
       {/* PROFILE TITLE */}
       <div className="flex items-center gap-8 sticky top-0 backdrop-blur-md p-4 z-10 bg-[#00000084]">
         <Link href="/">
-          <img src="icons/back.svg" alt="back" width={24} height={24} />
+          <Image src="/icons/back.svg" alt="back" width={24} height={24} />
         </Link>
-        <h1 className="font-bold text-lg">Lama Dev</h1>
+        <h1 className="font-bold text-lg"> Olatunji Akorede</h1>
       </div>
+
       {/* INFO */}
-      <div className="">
-        {/* COVER & AVATAR CONTAINER */}
+      <div>
+        {/* COVER & AVATAR */}
         <div className="relative w-full">
           {/* COVER */}
           <div className="w-full aspect-[3/1] relative">
-            <Image src="https://ik.imagekit.io/v9wymwzf6/public/general/cover.jpg?updatedAt=1754699850938" urlEndpoint="https://ik.imagekit.io/v9wymwzf6/public/general/cover.jpg?updatedAt=1754699850938" alt="" width={600} height={200}  />
+            <Image
+              src="/general/d8mjv85da1r61.jpg"
+              alt="Cover"
+              fill
+              className="object-cover"
+            />
           </div>
+
           {/* AVATAR */}
           <div className="w-1/5 aspect-square rounded-full overflow-hidden border-4 border-black bg-gray-300 absolute left-4 -translate-y-1/2">
-            <Image src="general/avatar.png" alt="" width={100} height={100}  />
+            <Image
+             src="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_zRv0fiMyU.JPG?updatedAt=1754957290695"
+              alt="Avatar"
+              width={100}
+              height={100}
+              className="object-cover"/>
           </div>
         </div>
+
+        {/* ACTIONS */}
         <div className="flex w-full items-center justify-end gap-2 p-2">
-          <div className="w-9 h-9 flex items-center justify-center rounded-full border-[1px] border-gray-500 cursor-pointer">
-            <img src="icons/more.svg" alt="more" width={20} height={20} />
+          <div className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-500 cursor-pointer">
+            <Image src="/icons/more.svg" alt="More" width={20} height={20} />
           </div>
-          <div className="w-9 h-9 flex items-center justify-center rounded-full border-[1px] border-gray-500 cursor-pointer">
-            <img src="icons/explore.svg" alt="more" width={20} height={20} />
+          <div className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-500 cursor-pointer">
+            <Image src="/icons/explore.svg" alt="Explore" width={20} height={20} />
           </div>
-          <div className="w-9 h-9 flex items-center justify-center rounded-full border-[1px] border-gray-500 cursor-pointer">
-            <img src="icons/message.svg" alt="more" width={20} height={20} />
+          <div className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-500 cursor-pointer">
+            <Image src="/icons/message.svg" alt="Message" width={20} height={20} />
           </div>
           <button className="py-2 px-4 bg-white text-black font-bold rounded-full">
             Follow
           </button>
         </div>
+
         {/* USER DETAILS */}
         <div className="p-4 flex flex-col gap-2">
           {/* USERNAME & HANDLE */}
-          <div className="">
-            <h1 className="text-2xl font-bold">Lama Dev</h1>
-            <span className="text-textGray text-sm">@lamaWebDev</span>
+          <div>
+            <h1 className="text-2xl font-bold">Olatunji Akorede</h1>
+            <span className="text-textGray text-sm">@heisolatunjiakorede</span>
           </div>
-          <p>Lama Dev Youtube Channel</p>
-          {/* JOB & LOCATION & DATE */}
+
+        
+
+          {/* LOCATION & JOIN DATE */}
           <div className="flex gap-4 text-textGray text-[15px]">
             <div className="flex items-center gap-2">
-              <img
-                src="icons/userLocation.svg"
-                alt="location"
-                width={20}
-                height={20}
-              />
-              <span>USA</span>
+              <Image src="/icons/userLocation.svg" alt="location" width={20} height={20} />
+              <span>Nigeria</span>
             </div>
             <div className="flex items-center gap-2">
-              <img src="icons/date.svg" alt="date" width={20} height={20} />
-              <span>Joined May 2021</span>
+              <Image src="/icons/date.svg" alt="date" width={20} height={20} />
+              <span>Joined February 2024</span>
             </div>
           </div>
-          {/* FOLLOWINGS & FOLLOWERS */}
+
+          {/* FOLLOWERS & FOLLOWINGS */}
           <div className="flex gap-4">
             <div className="flex items-center gap-2">
-              <span className="font-bold">100</span>
+              <span className="font-bold">400</span>
               <span className="text-textGray text-[15px]">Followers</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="font-bold">100</span>
-              <span className="text-textGray text-[15px]">Followings</span>
+              <span className="text-textGray text-[15px]">Following</span>
             </div>
           </div>
         </div>
       </div>
+
       {/* FEED */}
       <Feed />
     </div>
   );
-};
-
-export default UserPage;
+}

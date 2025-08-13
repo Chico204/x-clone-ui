@@ -32,8 +32,8 @@ const Share = () => {
        {/*AVATAR */}
        <div className="relative w-10 h-10 rounded-full overflow-hidden">
             <Image
-            src="https://ik.imagekit.io/v9wymwzf6/public/general/avatar.png?updatedAt=1754699850233"
-            urlEndpoint="https://ik.imagekit.io/v9wymwzf6/public/general/avatar.png?updatedAt=1754699850233"
+            src="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_wHHKU7wb3.JPG?updatedAt=1755096731324"
+            urlEndpoint="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_wHHKU7wb3.JPG?updatedAt=1755096731324"
             alt="avatar"
             width={100}
             height={100}

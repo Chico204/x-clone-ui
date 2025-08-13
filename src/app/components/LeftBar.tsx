@@ -4,21 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PostModal from "./PostModal";
-
-const menuList = [
-  { id: 1, name: "Homepage", link: "/", icon: "home.svg" },
-  { id: 2, name: "Explore", link: "/", icon: "explore.svg" },
-  { id: 4, name: "Messages", link: "/", icon: "message.svg" },
-  { id: 5, name: "Bookmarks", link: "/", icon: "bookmark.svg" },
-  { id: 6, name: "Jobs", link: "/", icon: "job.svg" },
-  { id: 7, name: "Communities", link: "/", icon: "community.svg" },
-  { id: 8, name: "Premium", link: "/", icon: "logo.svg" },
-  { id: 9, name: "Profile", link: "/", icon: "profile.svg" },
-  { id: 10, name: "More", link: "/", icon: "more.svg" },
-];
+import RightBar from "./RightBar";
 
 export default function LeftBar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showRightBar, setShowRightBar] = useState(false);
 
   return (
     <>
@@ -29,19 +19,54 @@ export default function LeftBar() {
             <Image src="icons/logo.svg" alt="logo" width={24} height={24} />
           </Link>
 
-          {/* Menu */}
-          <div className="flex flex-col gap-4">
-            {menuList.map((item) => (
-              <Link
-                href={item.link}
-                className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4"
-                key={item.id}
-              >
-                <Image src={`icons/${item.icon}`} alt={item.name} width={24} height={24} />
-                <span className="hidden xxl:inline">{item.name}</span>
-              </Link>
-            ))}
+          {/* Menu Items */}
+          <Link href="/" className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4">
+            <Image src="icons/home.svg" alt="Homepage" width={24} height={24} />
+            <span className="hidden xxl:inline">Homepage</span>
+          </Link>
+
+          <div
+            onClick={() => setShowRightBar(true)}
+            className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4 cursor-pointer"
+          >
+            <Image src="icons/explore.svg" alt="Explore" width={24} height={24} />
+            <span className="hidden xxl:inline">Explore</span>
           </div>
+
+          <Link href="/" className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4">
+            <Image src="icons/message.svg" alt="Messages" width={24} height={24} />
+            <span className="hidden xxl:inline">Messages</span>
+          </Link>
+
+          <Link href="/" className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4">
+            <Image src="icons/bookmark.svg" alt="Bookmarks" width={24} height={24} />
+            <span className="hidden xxl:inline">Bookmarks</span>
+          </Link>
+
+          <Link href="/" className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4">
+            <Image src="icons/job.svg" alt="Jobs" width={24} height={24} />
+            <span className="hidden xxl:inline">Jobs</span>
+          </Link>
+
+          <Link href="/" className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4">
+            <Image src="icons/community.svg" alt="Communities" width={24} height={24} />
+            <span className="hidden xxl:inline">Communities</span>
+          </Link>
+
+          <Link href="/" className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4">
+            <Image src="icons/logo.svg" alt="Premium" width={24} height={24} />
+            <span className="hidden xxl:inline">Premium</span>
+          </Link>
+
+          <Link href="/heisolatunjiakorede" className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4">
+            <Image src="icons/profile.svg" alt="Profile" width={24} height={24} />
+            <span className="hidden xxl:inline">Profile</span>
+          </Link>
+
+          <Link href="/" className="p-2 rounded-full hover:bg-[#181818] flex items-center gap-4">
+            <Image src="icons/more.svg" alt="More" width={24} height={24} />
+            <span className="hidden xxl:inline">More</span>
+          </Link>
 
           {/* Post Button */}
           <button
@@ -62,7 +87,7 @@ export default function LeftBar() {
         <div className="flex items-center justify-between pt-20">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 relative rounded-full overflow-hidden">
-              <Image src="/general/avatar.png" alt="profile" fill />
+              <Image src="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_zRv0fiMyU.JPG?updatedAt=1754957290695"alt="profile" fill />
             </div>
             <div className="hidden xxl:flex flex-col">
               <span className="font-bold">Olatunji Akorede</span>
@@ -73,8 +98,21 @@ export default function LeftBar() {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Post Modal */}
       {isModalOpen && <PostModal onClose={() => setIsModalOpen(false)} />}
+
+      {/* Mobile RightBar Overlay */}
+      {showRightBar && (
+        <div className="lg:hidden fixed inset-0 z-50 bg-black p-4 overflow-y-auto animate-slideIn">
+          <button
+            onClick={() => setShowRightBar(false)}
+            className="mb-4 text-white font-bold"
+          >
+            Close
+          </button>
+          <RightBar />
+        </div>
+      )}
     </>
   );
 }

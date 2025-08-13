@@ -13,7 +13,7 @@ const Recommendations = () => {
           </div>
           <div className=''>
             <h1 className="text-md font-bold">Olatunji Akorede</h1>
-            <span className="text-textGray text-sm">@olatunjiakorede</span>
+            <span className="text-textGray text-sm">@heisolatunjiakorede</span>
           </div>
         </div>
         {/* BUTTON */}
@@ -27,7 +27,7 @@ const Recommendations = () => {
           </div>
           <div className=''>
             <h1 className="text-md font-bold">Olatunji Akorede</h1>
-            <span className="text-textGray text-sm">@olatunjiakorede</span>
+            <span className="text-textGray text-sm">@heisolatunjiakorede</span>
           </div>
         </div>
         {/* BUTTON */}
@@ -41,7 +41,7 @@ const Recommendations = () => {
           </div>
           <div className=''>
             <h1 className="text-md font-bold">Olatunji Akorede</h1>
-            <span className="text-textGray text-sm">@olatunjiakorede</span>
+            <span className="text-textGray text-sm">@heisolatunjiakorede</span>
           </div>
         </div>
         {/* BUTTON */}
