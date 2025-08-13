@@ -1,6 +1,6 @@
 import Feed from "../components/Feed";
 
-import { Image } from "@imagekit/next";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function UserPage() {
@@ -31,8 +31,8 @@ export default function UserPage() {
           {/* AVATAR */}
           <div className="w-1/5 aspect-square rounded-full overflow-hidden border-4 border-black bg-gray-300 absolute left-4 -translate-y-1/2">
             <Image
-             src="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_wHHKU7wb3.JPG?updatedAt=1755096731324"
-             urlEndpoint="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_wHHKU7wb3.JPG?updatedAt=1755096731324"
+             src="/general/IMG_2625.JPG"
+            
               alt="Avatar"
               width={100}
               height={100}
@@ -73,7 +73,7 @@ export default function UserPage() {
               <span>Nigeria</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src="https://ik.imagekit.io/v9wymwzf6/public/icons/date.svg?updatedAt=1754699844278" alt="date" width={20} height={20} />
+              <Image src="/icons/date.svg" alt="date" width={20} height={20} />
               <span>Joined February 2024</span>
             </div>
           </div>
