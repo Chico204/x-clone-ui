@@ -1,5 +1,5 @@
 import Feed from "../components/Feed";
-import Image from "next/image";
+import { Image } from "@imagekit/next";
 import Link from "next/link";
 
 export default function UserPage() {
