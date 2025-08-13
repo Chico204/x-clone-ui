@@ -1,7 +1,7 @@
 "use client";
 
 
-const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
+
 
 type VideoTypes = {
   path: string;

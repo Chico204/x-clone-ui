@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -10,7 +11,7 @@ const PopularTags = () => {
       {/* TREND EVENT */}
       <div className="flex gap-4">
         <div className="relative w-20 h-20 rounded-xl overflow-hidden">
-          <img
+          <Image
             src="/general/post.jpeg"
         
             alt="event"
@@ -29,7 +30,7 @@ const PopularTags = () => {
       <div className="">
         <div className="flex items-center justify-between">
           <span className="text-textGray text-sm">Sports • Trending</span>
-          <img src="icons/infoMore.svg" alt="info" width={16} height={16} />
+          <Image src="icons/infoMore.svg" alt="info" width={16} height={16} />
         </div>
         <h2 className="text-textGrayLight font-bold">Chelsea</h2>
         <span className="text-textGray text-sm">120K posts</span>
@@ -38,7 +39,7 @@ const PopularTags = () => {
       <div className="">
         <div className="flex items-center justify-between">
           <span className="text-textGray text-sm">Entertainment • Trending</span>
-          <img src="icons/infoMore.svg" alt="info" width={16} height={16} />
+          <Image src="icons/infoMore.svg" alt="info" width={16} height={16} />
         </div>
         <h2 className="text-textGrayLight font-bold">Rema</h2>
         <span className="text-textGray text-sm">200K posts</span>
@@ -47,7 +48,7 @@ const PopularTags = () => {
       <div className="">
         <div className="flex items-center justify-between">
           <span className="text-textGray text-sm">Technology • Trending</span>
-          <img src="icons/infoMore.svg" alt="info" width={16} height={16} />
+          <Image src="icons/infoMore.svg" alt="info" width={16} height={16} />
         </div>
         <h2 className="text-textGrayLight font-bold">OpenAI</h2>
         <span className="text-textGray text-sm">20K posts</span>
@@ -56,7 +57,7 @@ const PopularTags = () => {
       <div className="">
         <div className="flex items-center justify-between">
           <span className="text-textGray text-sm">Sports • Trending</span>
-          <img src="icons/infoMore.svg" alt="info" width={16} height={16} />
+          <Image src="icons/infoMore.svg" alt="info" width={16} height={16} />
         </div>
         <h2 className="text-textGrayLight font-bold">Asencio</h2>
         <span className="text-textGray text-sm">1,112 posts</span>

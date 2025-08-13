@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import LeftBar from "./LeftBar";
+
 import RightBar from "./RightBar";
 
 export default function LeftBarWrapper() {

@@ -1,28 +1,13 @@
-import { Image } from "@imagekit/next";
+
+import Image from "next/image";
 import Imagecontent from "./imagecontent";
 import PostInfo from "./PostInfo";
 import PostInteractions from "./PostInteractions";
-import { imagekit } from "@/app/utils";
 
-interface FileDetailsResponse {
-  width: number;
-  height: number;
-  filePath: string;
-  url: string;
-  fileType: string;
-  customMetadata?: { sensitive: boolean };
-}
 
 const Post = async () => {
  
-  const getFileDetails =  async (fileId:string):Promise<FileDetailsResponse>=>{
-    return new Promise((resolve, reject) => {
-      imagekit.getFileDetails(fileId, function(error, result){
-        if(error) console.log(error);
-        else console.log(result);
-      })
-  })
-}
+  
     
 
 
@@ -43,7 +28,7 @@ const Post = async () => {
     <div className="flex gap-4">
         {/*POST IMAGE*/}
         <div className=" relative w-10 h-10 rounded-full overflow-hidden ">
-        <img  src="/general/IMG_2625.JPG" alt="pro" width={50} height={50} />
+        <Image  src="/general/IMG_2625.JPG" alt="pro" width={50} height={50} />
         </div>
         {/*POST TEXT*/}
         <div className="flex-1 flex flex-col gap-2">
