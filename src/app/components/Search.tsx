@@ -1,4 +1,4 @@
-import { Image } from "@imagekit/next";
+import Image from "next/image";
 
 const Search = () => {
   return (

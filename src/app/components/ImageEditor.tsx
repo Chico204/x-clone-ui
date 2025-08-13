@@ -48,7 +48,7 @@ const ImageEditor = ({
                <button className="py-2 px-4 rounded-full bg-white text-black font-bold " onClick={onClose}>Save</button>
         </div>
         {/*IMAGE CONTAINER*/}
-        <div className="w-[600px] h-[500px] flex items-center ">
+        <div className="w-[400px] h-[400px] flex items-center ">
              <Image
             src={previewURL}
             alt=""

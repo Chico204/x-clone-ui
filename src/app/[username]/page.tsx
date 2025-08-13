@@ -1,4 +1,5 @@
 import Feed from "../components/Feed";
+
 import { Image } from "@imagekit/next";
 import Link from "next/link";
 
@@ -31,6 +32,7 @@ export default function UserPage() {
           <div className="w-1/5 aspect-square rounded-full overflow-hidden border-4 border-black bg-gray-300 absolute left-4 -translate-y-1/2">
             <Image
              src="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_wHHKU7wb3.JPG?updatedAt=1755096731324"
+             urlEndpoint="https://ik.imagekit.io/v9wymwzf6/public/general/IMG_2625_wHHKU7wb3.JPG?updatedAt=1755096731324"
               alt="Avatar"
               width={100}
               height={100}
